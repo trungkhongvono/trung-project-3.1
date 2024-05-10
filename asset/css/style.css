@@ -1245,14 +1245,15 @@ body {
 .footer-desc {
     background-color: transparent;
     outline: none;
-    padding-left: 30px;
-    width: 200px;
+    width: 350px;
     height: 40px;
+    padding-left: 30px;
+
     border: none;
     color: white;
     font-size: 2.2rem;
     font-weight: 600;
-
+    padding: 0 15px;
     line-height: 1;
 }
 .footer-desc:not(:placeholder-shown) {
@@ -1262,7 +1263,6 @@ body {
     border-left: 1px solid #6a8383;
 }
 .footer-arrow {
-    margin-left: 132px;
     cursor: pointer;
 }
 .footer-line {
@@ -1330,4 +1330,10 @@ a {
 }
 .footer-list-item {
     margin-top: 20px;
+}
+.bug {
+    border: none;
+    color: #c4c4c4;
+    background-color: transparent;
+    cursor: pointer;
 }

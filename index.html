@@ -724,29 +724,34 @@
                     <div class="footer-left">
                         <h1 class="footer-title">Sign up for our newsletter</h1>
                         <div class="footer-desc-arrow">
-                            <input
-                                type="email"
-                                class="footer-desc"
-                                placeholder="Enter your email"
-                            />
-                            <a href="#">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="28"
-                                    height="18"
-                                    viewBox="0 0 28 18"
-                                    fill="none"
-                                    class="footer-arrow"
-                                >
-                                    <path
-                                        d="M1 9H27M27 9L18.3333 1M27 9L18.3333 17"
-                                        stroke="#C4C4C4"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </a>
+                            <form id="myForm">
+                                <input
+                                    type="email"
+                                    class="footer-desc"
+                                    id="myEmail"
+                                    required
+                                    placeholder="Enter your email"
+                                />
+
+                                <button type="submit" class="bug">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28"
+                                        height="18"
+                                        viewBox="0 0 28 18"
+                                        fill="none"
+                                        class="footer-arrow"
+                                    >
+                                        <path
+                                            d="M1 9H27M27 9L18.3333 1M27 9L18.3333 17"
+                                            stroke="#C4C4C4"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        />
+                                    </svg>
+                                </button>
+                            </form>
                         </div>
                         <div class="footer-line"></div>
                         <div class="footer-list">
@@ -826,3 +831,28 @@
         </div>
     </body>
 </html>
+<script>
+    var form = document.getElementById("myForm");
+    form.addEventListener("submit", function (event) {
+        var input = document.getElementById("myInput");
+        if (input.value === "") {
+            event.preventDefault();
+            alert("Please enter some data!");
+        } else {
+            window.location.href = "#";
+        }
+    });
+</script>
+<script>
+    var form = document.getElementById("myForm");
+    form.addEventListener("submit", function (event) {
+        var email = document.getElementById("myEmail");
+        if (email.value === "") {
+            event.preventDefault();
+            alert("Please enter an email!");
+        } else {
+            // Xóa dữ liệu từ trường nhập
+            email.value = "";
+        }
+    });
+</script>
